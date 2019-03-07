@@ -11,6 +11,6 @@ Josep Lluís Carrion-i-Silvestre
 
 [icss.zip](icss.zip) holds the complete content
 
-extracted to the [/icss](/icss)
+extracted to the [/icss/](/icss/) folder
 
-datasets are copied to the /datasets/
+datasets are copied to the [/datasets/](/datasets/)
