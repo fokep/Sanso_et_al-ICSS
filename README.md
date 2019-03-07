@@ -5,6 +5,6 @@ https://www.researchgate.net/publication/24138907_Testing_for_Changes_in_the_Unc
 
 by
 
-Andreu Sansó
-Vicent Aragó
+Andreu Sansó,
+Vicent Aragó and
 Josep Lluís Carrion-i-Silvestre
