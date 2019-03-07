@@ -1,0 +1,103 @@
+/*****************************************
+* Replicates the emprirical aplication in
+* Sanso, Aragó & Carrion (2002): "Testing for changes in the unconditional 
+* variance of financial time series"
+*
+*****************************************/
+#include icss.src
+cls;
+
+@ You may change the path and name of the output file @
+output file=output.out reset;
+
+@ criteria for the kappa_2 test: spectral quadratic window and automatic bandwidth selection @
+cri={1, 1};
+cri=cri|4;
+ 
+
+
+@ You may change the path and name of the input file: han.dat (521 observations) @
+"HAN";
+load x[521,1]=han.dat;
+e=x-meanc(x);
+test=0; @ uses the Inclant-Tiao test @
+{cpr,nbr}=icss(e,test,cri);
+"using inclant-tiao test";
+print "Number of breaks" nbr;
+print "Break positions" cpr';
+
+test=1; @ uses the kappa_1 test (corrects for non-mesokurtosis) @
+{cpr,nbr}=icss(e,test,cri);
+"using kappa 1 test";
+print "Number of breaks" nbr;
+print "Break positions" cpr';
+
+test=2; @ uses the kappa_2 test (corrects for non-mesokurtosis and 
+	persistence in conditional variance) @
+{cpr,nbr}=icss(e,test,cri);
+"using kappa 2 test";
+print "Number of breaks" nbr;
+print "Break positions" cpr';
+
+
+
+load x[521,1]=sp.dat;
+"SP";
+e=x-meanc(x);
+test=0;
+{cpr,nbr}=icss(e,test,cri);
+print "Number of breaks" nbr;
+print "Break positions" cpr';
+
+test=1;
+{cpr,nbr}=icss(e,test,cri);
+print "Number of breaks" nbr;
+print "Break positions" cpr';
+
+test=2;
+{cpr,nbr}=icss(e,test,cri);
+print "Number of breaks" nbr;
+print "Break positions" cpr';
+
+
+load x[473,1]=ftse.dat;
+"FTSE";
+e=x-meanc(x);
+test=0;
+{cpr,nbr}=icss(e,test,cri);
+print "Number of breaks" nbr;
+print "Break positions" cpr';
+
+test=1;
+{cpr,nbr}=icss(e,test,cri);
+print "Number of breaks" nbr;
+print "Break positions" cpr';
+
+test=2;
+{cpr,nbr}=icss(e,test,cri);
+print "Number of breaks" nbr;
+print "Break positions" cpr';
+
+
+load x[466,1]=nik.dat;
+"NIK";
+e=x-meanc(x);
+test=0;
+{cpr,nbr}=icss(e,test,cri);
+print "Number of breaks" nbr;
+print "Break positions" cpr';
+
+test=1;
+{cpr,nbr}=icss(e,test,cri);
+print "Number of breaks" nbr;
+print "Break positions" cpr';
+
+test=2;
+{cpr,nbr}=icss(e,test,cri);
+print "Number of breaks" nbr;
+print "Break positions" cpr';
+
+
+
+
+
