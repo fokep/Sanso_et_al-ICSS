@@ -8,3 +8,9 @@ by
 Andreu Sansó,
 Vicent Aragó and
 Josep Lluís Carrion-i-Silvestre
+
+icss.zip holds the complete content
+
+extracted to the /icss/ folder
+
+datasets are copied to the /datasets/ folder
