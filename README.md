@@ -9,8 +9,8 @@ Andreu Sansó,
 Vicent Aragó and
 Josep Lluís Carrion-i-Silvestre
 
-icss.zip holds the complete content
+[icss.zip](icss.zip) holds the complete content
 
-extracted to the /icss/ folder
+extracted to the [/icss](/icss)
 
-datasets are copied to the /datasets/ folder
+datasets are copied to the /datasets/
