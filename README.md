@@ -7,7 +7,7 @@ by
 
 Andreu Sansó,
 Vicent Aragó and
-Josep Lluís Carrion-i-Silvestre
+Josep Lluís Carrion-i-Silvestre (code author)
 
 [icss.zip](icss.zip) holds the complete content
 
